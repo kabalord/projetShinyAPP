@@ -15,6 +15,7 @@ shinyUI(
     dashboardPage(
         dashboardHeader(title = "Football"),
         dashboardSidebar(
+            sliderInput("bins", "Number of breaks", 1,100,50),
             menuItem("Dashboard"),
                 menuSubItem("Clubs"),
                 menuSubItem("jouers"),
@@ -23,8 +24,7 @@ shinyUI(
         ),
         dashboardBody(
             fluidRow(
-                box(plotOutput("histogram")),
-                box(sliderInput("bins", "Number of breaks", 1,100,50))
+                box(plotOutput("histogram"))
             )
         ) 
     )
