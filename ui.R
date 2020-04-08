@@ -13,8 +13,14 @@ library(shinydashboard)
 # Define UI for application that draws a histogram
 shinyUI(
     dashboardPage(
-        dashboardHeader(),
-        dashboardSidebar(),
+        dashboardHeader(title = "Football"),
+        dashboardSidebar(
+            menuItem("Dashboard"),
+                menuSubItem("Clubs"),
+                menuSubItem("jouers"),
+            menuItem("Detailed Analysis"),
+            menuItem("Raw Data")
+        ),
         dashboardBody() 
     )
 )
