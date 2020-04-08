@@ -21,6 +21,11 @@ shinyUI(
             menuItem("Detailed Analysis"),
             menuItem("Raw Data")
         ),
-        dashboardBody() 
+        dashboardBody(
+            fluidRow(
+                box(plotOutput("histogram")),
+                box(sliderInput("bins", "Number of breaks", 1,100,50))
+            )
+        ) 
     )
 )
