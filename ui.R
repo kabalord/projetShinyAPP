@@ -14,17 +14,29 @@ library(shinydashboard)
 shinyUI(
     dashboardPage(
         dashboardHeader(title = "Football"),
-        dashboardSidebar(
+        dashboardSidebar( 
             sliderInput("bins", "Number of breaks", 1,100,50),
-            menuItem("Dashboard"),
-                menuSubItem("Clubs"),
-                menuSubItem("jouers"),
-            menuItem("Detailed Analysis"),
-            menuItem("Raw Data")
+            sidebarMenu(
+            menuItem("Dashboard", tabName = "dashboard"),
+                menuSubItem("Clubs", tabName = "clubs"),
+                menuSubItem("Jouers", tabName ="jouers" ),
+            menuItem("Detailed Analysis", tabName = "detailed analysis"),
+            menuItem("Raw Data", tabName = "row data")
+            )
         ),
         dashboardBody(
-            fluidRow(
-                box(plotOutput("histogram"))
+            tabItems(
+                tabItem(tabName = "dashboard", 
+                        fluidRow(
+                            box(plotOutput("histogram"))
+                        )
+                    ),
+                tabItem(tabName = "clubs",
+                      h1("clubs tab"),  
+                        ),
+                tabItem(tabName = "jouers",
+                        h1("jouers tab")
+                        )
             )
         ) 
     )
