@@ -17,7 +17,7 @@ shinyUI(
         dashboardSidebar( 
             sliderInput("bins", "Number of breaks", 1,100,50),
             sidebarMenu(
-            menuItem("Dashboard", tabName = "dashboard"),
+            menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
                 menuSubItem("Clubs", tabName = "clubs"),
                 menuSubItem("Jouers", tabName ="jouers" ),
             menuItem("Detailed Analysis", tabName = "detailed analysis"),
