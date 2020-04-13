@@ -56,7 +56,7 @@ shinyUI(
             menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
                 menuSubItem("Clubs", tabName = "clubs"),
                 menuSubItem("Jouers", tabName ="jouers" ),
-            menuItem("Detailed Analysis", tabName = "detailed analysis"),
+            menuItem("Detailed Analysis", tabName = "detailed analysis", badgeLabel = "New", badgeColor = "green"),
             menuItem("Raw Data", tabName = "row data")
             )
         ),
