@@ -31,7 +31,24 @@ shinyUI(
                                          icon = icon("warning"),
                                          status = "warning"
                                      )
-                            )
+                            ),
+                        dropdownMenu(type = "tasks",
+                                     taskItem(
+                                       value = 80,
+                                       color = "aqua",
+                                       "Shiny Dasboard Education"
+                                     ),
+                                     taskItem(
+                                       value = 55,
+                                       color = "red",
+                                       "Overall R Education"
+                                     ),
+                                     taskItem(
+                                      value = 40,
+                                      color = "green",
+                                      "Data Science Education"
+                                 )
+                             )
                         ),
         dashboardSidebar( 
             sliderInput("bins", "Number of breaks", 1,100,50),
