@@ -57,7 +57,8 @@ shinyUI(
                 menuSubItem("Clubs", tabName = "clubs"),
                 menuSubItem("Jouers", tabName ="jouers" ),
             menuItem("Detailed Analysis", tabName = "detailed analysis", badgeLabel = "New", badgeColor = "green"),
-            menuItem("Raw Data", tabName = "row data")
+            menuItem("Raw Data", tabName = "row data"),
+            textInput("text_input", "Search joueurs", value = "Ronaldo" )
             )
         ),
         dashboardBody(
