@@ -50,8 +50,7 @@ shinyUI(
                                  )
                              )
                         ),
-        dashboardSidebar( 
-            sliderInput("bins", "Number of breaks", 1,100,50),
+        dashboardSidebar(
             sidebarMenu(
             menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
                 menuSubItem("Clubs", tabName = "clubs"),
@@ -64,8 +63,9 @@ shinyUI(
             tabItems(
                 tabItem(tabName = "dashboard", 
                         fluidRow(
-                            box(plotOutput("histogram"))
-                        )
+                            box(plotOutput("histogram")),
+                            box(sliderInput("bins", "Number of breaks", 1,100,50))
+                        ),
                     ),
                 tabItem(tabName = "clubs",
                       h1("clubs tab"),  
