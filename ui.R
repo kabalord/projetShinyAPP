@@ -57,16 +57,19 @@ shinyUI(
                 menuSubItem("Clubs", tabName = "clubs"),
                 menuSubItem("Jouers", tabName ="jouers" ),
             menuItem("Detailed Analysis", tabName = "detailed analysis", badgeLabel = "New", badgeColor = "green"),
-            menuItem("Raw Data", tabName = "row data"),
-            textInput("text_input", "Search joueurs", value = "Ronaldo" )
+            menuItem("Raw Data", tabName = "row data")
             )
         ),
         dashboardBody(
             tabItems(
                 tabItem(tabName = "dashboard", 
                         fluidRow(
-                            box(plotOutput("histogram")),
-                            box(sliderInput("bins", "Number of breaks", 1,100,50))
+                            box(title = "Histogram of Faithful", status = "warning", solidHeader = TRUE, plotOutput("histogram")),
+                            box(title = "Controls for graph", status = "info", solidHeader = TRUE, 
+                                "Là vous pouvez mettre un message d'utilisation",
+                                sliderInput("bins", "Number of breaks", 1,100,50),
+                                textInput("text_input", "Search joueurs", value = "Walter")
+                                )
                         ),
                     ),
                 tabItem(tabName = "clubs",
