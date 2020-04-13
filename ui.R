@@ -13,12 +13,12 @@ library(shinydashboard)
 # Define UI for application that draws a histogram
 shinyUI(
     dashboardPage(
-        dashboardHeader(title = "Football", 
-                        dropdownMenu(type = "message",
-                                     messageItem(from = "Clubs", message = "message clubs"),
-                                     messageItem(from = "Jouers", message = "message jouers", icon = icon("futbol"), time = "19:44"),
-                                     messageItem(from = "finances", message = "message finances", icon = icon("bar-chart"), time = "13-04-2020")
-                                     )
+        dashboardHeader(title = "Football", dropdownMenuOutput("msgOutput")
+                        # dropdownMenu(type = "message",
+                        #              # messageItem(from = "Clubs", message = "message clubs"),
+                        #              # messageItem(from = "Jouers", message = "message jouers", icon = icon("futbol"), time = "19:44"),
+                        #              # messageItem(from = "finances", message = "message finances", icon = icon("bar-chart"), time = "13-04-2020")
+                        #              # )
                         ),
         dashboardSidebar( 
             sliderInput("bins", "Number of breaks", 1,100,50),
