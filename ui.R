@@ -52,6 +52,7 @@ shinyUI(
                         ),
         dashboardSidebar(
             sidebarMenu(
+                sidebarSearchForm("searchText", "buttonSearch", "Search"),
             menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
                 menuSubItem("Clubs", tabName = "clubs"),
                 menuSubItem("Jouers", tabName ="jouers" ),
