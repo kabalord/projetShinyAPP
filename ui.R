@@ -73,7 +73,11 @@ shinyUI(
                         ),
                     ),
                 tabItem(tabName = "clubs",
-                      h1("clubs tab"),
+                      fluidRow(
+                          infoBox("Jouers force :", 1000, icon = icon("futbol")),
+                          infoBox("Club league :", "Calcio italiano", icon = icon("trophy")),
+                          infoBoxOutput("performance")
+                      ),
                       fluidRow(
                           tabBox(
                             tabPanel(title = "première tab", h3("contenu première tab")

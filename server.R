@@ -22,4 +22,8 @@ shinyServer(function(input, output) {
       })
       dropdownMenu(type = "messages", .list = msgs)
     })
+    
+    output$performance <- renderInfoBox({
+      infoBox("Performance :", "100%", icon = icon("chart-bar"))
+    })
 })
