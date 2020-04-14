@@ -73,6 +73,10 @@ shinyUI(
                         ),
                     ),
                 tabItem(tabName = "clubs",
+                        fluidRow(
+                            valueBox(15*200, "last match", icon = icon("hourglass-3")),
+                            valueBoxOutput("itemRequested")
+                        ),
                       fluidRow(
                           infoBox("Jouers force :", 1000, icon = icon("futbol")),
                           infoBox("Club league :", "Calcio italiano", icon = icon("trophy")),

@@ -26,4 +26,8 @@ shinyServer(function(input, output) {
     output$performance <- renderInfoBox({
       infoBox("Performance :", "100%", icon = icon("chart-bar"))
     })
+    
+    output$itemRequested <- renderValueBox({
+      valueBox(15*300, "Item Request by Jouers", icon = icon("fire"), color = "yellow")
+    })
 })
