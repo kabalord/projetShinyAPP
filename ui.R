@@ -78,9 +78,11 @@ shinyUI(
                             valueBoxOutput("itemRequested")
                         ),
                       fluidRow(
+                          column(width = 12,
                           infoBox("Jouers force :", 1000, icon = icon("futbol")),
                           infoBox("Club league :", "Calcio italiano", icon = icon("trophy")),
                           infoBoxOutput("performance")
+                          )
                       ),
                       fluidRow(
                           tabBox(
