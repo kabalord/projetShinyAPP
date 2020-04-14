@@ -73,7 +73,15 @@ shinyUI(
                         ),
                     ),
                 tabItem(tabName = "clubs",
-                      h1("clubs tab"),  
+                      h1("clubs tab"),
+                      fluidRow(
+                          tabBox(
+                            tabPanel(title = "première tab", h3("contenu première tab")
+                              ),
+                            tabPanel(title = "deuxième tab", h3("contenu deuxième tab")
+                            )
+                          )
+                      )
                         ),
                 tabItem(tabName = "jouers",
                         h1("jouers tab")
